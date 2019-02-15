@@ -3,5 +3,6 @@
 # This will make your scripts compatible even if Magisk change its mount point in the future
 MODDIR=${0%/*}
 
-# This script will be executed in post-fs-data mode
-# More info in the main Magisk thread
+# Allow camera HAL to access the legacy /data paths
+magiskpolicy --live "allow hal_camera_default camera_data_file file { getattr open read write }"
+magiskpolicy --live "allow hal_camera_default camera_data_file dir search"
