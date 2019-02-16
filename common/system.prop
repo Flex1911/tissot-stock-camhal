@@ -2,3 +2,4 @@
 # Example: Change dpi
 # ro.sf.lcd_density=320
 persist.vendor.camera.CDS=off
+persist.camera.HAL3.enabled=1
