@@ -6,3 +6,4 @@ MODDIR=${0%/*}
 # Allow camera HAL to access the legacy /data paths
 magiskpolicy --live "allow hal_camera_default camera_data_file file { getattr open read write }"
 magiskpolicy --live "allow hal_camera_default camera_data_file dir search"
+#magiskpolicy --live "allow init hal_camera_default_exec file execute_no_trans"
